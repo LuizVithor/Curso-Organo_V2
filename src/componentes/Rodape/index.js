@@ -2,6 +2,7 @@ import "./rodape.css"
 
 const Rodape = () => {
     return (
+        <footer className="bottom">
             <div className="rodape2">
                 <section>
                     <a href="https://www.linkedin.com/in/luizvithor/">
@@ -21,6 +22,7 @@ const Rodape = () => {
                 </div>
 
             </div>
+        </footer>
     )
 }
 

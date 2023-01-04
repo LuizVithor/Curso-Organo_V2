@@ -1,4 +1,3 @@
-import {AiFillEyeInvisible , AiFillEye} from "react-icons/ai"
 import { useState } from 'react'
 import Botao from '../Botao'
 import Campo from '../Campo'
@@ -46,7 +45,7 @@ const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
     return (
         <div>
             <div className="alinhar">
-            {oculto === true ? <Botao onclick={ocultar} texto='Mostrar Formularios'></Botao> : <Botao onclick={ocultar} texto='Ocultar Formularios'></Botao>}
+            {oculto === true ? <Botao onclick={ocultar} classX="botaoP" texto='Mostrar Formularios'></Botao> : <Botao onclick={ocultar} texto='Ocultar Formularios'></Botao>}
             </div>
             {oculto === false ?<section className="formulario-container">
                 <form className="formulario" onSubmit={aoSubmeter}>
