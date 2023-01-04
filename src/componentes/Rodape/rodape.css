@@ -4,12 +4,14 @@
     width: 100%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     background-image: url("../../../public/imagens/fundo.png");
     background-position: left;
 }
 
 .rodape2 section {
+    flex-wrap: wrap;
     display: flex;
     justify-content:space-around;
     align-items: center;
@@ -30,4 +32,19 @@
     height: 77.8px;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 767px) {
+    .rodape2 {
+        padding-top: 20px;
+        background-color: #6278F7;
+        height: 260px;
+        width: 100%;
+        display: flex;
+        align-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-image: url("../../../public/imagens/fundo.png");
+        background-position: left;
+    }
 }

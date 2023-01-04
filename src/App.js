@@ -71,13 +71,37 @@ function App() {
     }))
   }
 
+  let estaOculto = false
+
+  function ocultar() {
+    if(estaOculto === false){
+      estaOculto = true
+      return estaOculto
+    } else {
+      estaOculto = false
+      return estaOculto
+    }
+  }
 
   return (
     <div>
       <Banner />
-      <Formulario aoCriarTime={cadastrarTime} times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <Formulario 
+      aoCriarTime={cadastrarTime} 
+      times={times.map(time => time.nome)} 
+      aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
       <section className="times">
-        {times.map((time, indice) => <Time mudarCor={mudarCor} key={indice} time={time} colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)} aoDeletar={deletarColaborador} aoFavoritar={resolverFavorito} />)}
+        {times.map((time, indice) => 
+          <Time 
+            mudarCor={mudarCor} 
+            key={indice} 
+            time={time} 
+            colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            estaOculto={ocultar}
+            aoDeletar={deletarColaborador} 
+            aoFavoritar={resolverFavorito} 
+          />
+        )}
       </section>
       <Rodape />
     </div>

@@ -46,3 +46,11 @@
 .favorito {
     margin-top: 20px;
 }
+
+@media (max-width: 767px) {
+    .colaborador {
+        position: relative;
+        width: 280px;
+        margin-bottom: 20px;
+    }
+}

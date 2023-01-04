@@ -1,7 +1,7 @@
 import './botao.css'
 
-const Botao = ({texto}) => {
-    return <button className="botao">
+const Botao = ({texto , onclick}) => {
+    return <button className="botao" onClick={onclick}>
         {texto}
     </button>
 }
